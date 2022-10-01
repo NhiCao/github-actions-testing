@@ -24,5 +24,4 @@ jobs:
       favorite_dish: "spring rolls"
     steps:
       - run: |
-          echo $age
           echo "The name was changed to ${{ steps.change-name.outputs.name }}"
