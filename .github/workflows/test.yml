@@ -25,4 +25,4 @@ jobs:
       favorite_dish: "spring rolls"
     steps:
       - run: |
-          echo "The name was changed to ${{ steps.change-name.outputs.full_name }}"
+          echo "The name was changed to ${{ job1.steps.change-name.outputs.full_name }}"
