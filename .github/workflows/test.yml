@@ -5,7 +5,7 @@ on:
     branches: [ "master" ]
 
 env:
-  name: "nhi"
+  full_name: "cao hai nhi"
 
 jobs:
   job1:
@@ -14,8 +14,8 @@ jobs:
       age: 27
     steps:
       - run: |
-          echo My name is $name
-          echo "::set-output name=name::thien"
+          echo My name is $full_name
+          echo "::set-output name=full_name::nguyen binh thien"
         id: change-name
 
   job2:
@@ -24,4 +24,4 @@ jobs:
       favorite_dish: "spring rolls"
     steps:
       - run: |
-          echo "The name was changed to ${{ steps.change-name.outputs.name }}"
+          echo "The name was changed to ${{ steps.change-name.outputs.full_name }}"
