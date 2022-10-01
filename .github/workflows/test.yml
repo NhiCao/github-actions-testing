@@ -3,23 +3,23 @@ name: CI
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
-  # workflow_dispatch:
 env:
   name: "nhi"
 
 jobs:
-  build:
+  job1:
     runs-on: ubuntu-latest
-
+    env:
+      age: 27
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Run a one-line script
-        run: echo $name
-
-      - name: Run a multi-line script
-        run: |
+      - run: |
           echo $name
+
+  job2:
+    runs-on: ubuntu-latest
+    env:
+      favorite_dish: "spring rolls"
+    steps:
+      - run: |
+          echo $age
