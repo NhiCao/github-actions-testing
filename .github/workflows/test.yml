@@ -15,7 +15,8 @@ jobs:
     steps:
       - run: |
           echo My name is $name
-          echo "::set-env name=name::thien"
+          echo "::set-output name=name::thien"
+        id: change-name
 
   job2:
     runs-on: ubuntu-latest
@@ -24,4 +25,4 @@ jobs:
     steps:
       - run: |
           echo $age
-          echo $name
+          echo "The name was changed to ${{ steps.change-name.outputs.name }}"
