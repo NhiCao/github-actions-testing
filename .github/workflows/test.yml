@@ -13,10 +13,11 @@ jobs:
     env:
       age: 27
     steps:
-      - run: |
-          echo My name is $full_name
-          echo "::set-output name=full_name::nguyen binh thien"
+      - name: Change name
         id: change-name
+        run: |
+          # echo My name is $full_name
+          echo "::set-output name=full_name::nguyen binh thien"
 
   job2:
     runs-on: ubuntu-latest
