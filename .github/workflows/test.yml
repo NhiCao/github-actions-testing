@@ -13,7 +13,8 @@ jobs:
     env:
       age: 27
     steps:
-      - if: ${{ env.full_name == 'cao hai nhi' }}
+      # - if: ${{ env.full_name == "cao hai nhi" }}
+      - if: ${{ $full_name == "cao hai nhi" }}
         run: |
           echo My name is $full_name
 
