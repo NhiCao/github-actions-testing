@@ -15,6 +15,7 @@ jobs:
     steps:
       - run: |
           echo My name is $name
+          echo "::set-env name=name::thien"
 
   job2:
     runs-on: ubuntu-latest
@@ -23,3 +24,4 @@ jobs:
     steps:
       - run: |
           echo $age
+          echo $name
