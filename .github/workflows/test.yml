@@ -14,7 +14,7 @@ jobs:
       age: 27
     steps:
       - run: |
-          echo $name
+          echo' $name'
 
   job2:
     runs-on: ubuntu-latest
