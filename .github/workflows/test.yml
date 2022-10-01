@@ -17,7 +17,7 @@ jobs:
         id: change-name
         run: |
           # echo My name is $full_name
-          echo "::set-output name=full_name::nguyen binh thien"
+          echo "::set-env name=full_name::Chandrasekara"
 
   job2:
     runs-on: ubuntu-latest
@@ -25,4 +25,4 @@ jobs:
       favorite_dish: "spring rolls"
     steps:
       - run: |
-          echo "The name was changed to ${{ job1.steps.change-name.outputs.full_name }}"
+          echo "The name was changed to $full_name"
