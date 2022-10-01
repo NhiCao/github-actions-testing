@@ -9,15 +9,13 @@ env:
 
 jobs:
   job1:
+    if: ${{ env.full_name == "cao hai nhi" }}
     runs-on: ubuntu-latest
     env:
       age: 27
     steps:
-      - name: Change name
-        id: change-name
-        run: |
-          # echo My name is $full_name
-          echo "::set-env name=full_name::Chandrasekara"
+      - run: |
+          echo My name is $full_name
 
   job2:
     runs-on: ubuntu-latest
